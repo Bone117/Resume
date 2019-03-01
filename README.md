@@ -6,57 +6,50 @@
 
 # 个人信息
 
-- 郑飞军/男/23
-
-- 本科/浙江师范大学行知学院/计算机科学与技术
-
+- 郑飞军 / 男 
+- 本科 / 浙江师范大学行知学院 / 计算机科学与技术
 - 工作年限：1年
-
 - 技术博客：https://www.yuque.com/xueyidianyehao
-
 - 期望职位：Python开发工程师
-
-     
 
 # 技能清单
 
-- 熟练使用Python语言
-- 熟练使用Django / DRF及相应组件 / 了解Flask基本使用 / 熟悉Restful API 接口规范
-- 熟练使用HTML5 / CSS3 / JavaScript / jQuery / Bootstrap / layui
-- 熟练使用MySQL及其数据库优化/ 了解Redis和Mongodb 基本使用
-- 了解MySQL主从  / Redis主从 / 熟悉Redis缓存
-- 熟练使用BeautifulSoup/ Xpath / Requests / selenium / 了解Scrapy
-- 熟悉TCP/IP / HTTP协议等网络协议
+- 熟悉Python开发，了解Java、Go
+- 熟悉Python网络编程，熟悉多进程、多线程、协程等
+- 熟悉Django，了解Flask并阅读过它们的源码，了解Django的URL等原理及Flask上下文管理
+- 熟悉Django-RESTframework并阅读过源码，熟悉Restful规范
+- 熟练使用HTML5，CSS3，JavaScript，jQuery，Bootstrap等前端技术
+- 熟悉MySQL增删查改及其查询优化，了解Redis和Mongodb 常用操作
+- 熟练使用BeautifulSoup， Xpath，Requests，selenium，了解Scrapy基本使用
+- 熟悉TCP/IP，HTTP协议等网络协议，熟悉Restful API 接口规范
 - 熟悉linux基本命令及其操作
-- 熟悉Git基本使用
 
 # 工作经历
 
 ## **金华软谷教育科技有限公司**   （ 2018年7月 ~ 2019年2月 ）
 
-### 浙江金榜
+### 浙江金榜(在线教育平台)
 
 ##### 项目简介
 
-基于Django-REST-framework框架和前端框架vue.js实现前后端分离的在线教育平台，实现视频在线播放以及支付宝、微信在线支付等功能，使用redis存储临时数据，实现消息推送功能。
+基于Django-REST-framework框架和前端框架vue.js实现前后端分离的在线教育平台，前端页面课程的分类展示，实现视频在线播放以及支付宝、微信在线支付等功能，使用redis存储临时数据，实现消息推送功能。
 
 ##### 个人负责
 
 - 基于axios、vuex、vue-cookie实现前后端数据交互
-- 基于Redis实现用户数据临时存储
 - 基于MySQL实现数据读写
-- 基于CC视频实现网课在线播放
 - 使用微信服务号信息模板进行消息推送
 - 基于支付宝、微信接口开发支付API
-- 利用redis的乐观锁，实现秒杀系统的数据同步
+- 使用django-celery实现支付成功时异步发送邮件通知
+- 错误日志监控
 
 ##### 项目总结
 
-数据库层面采用了数据库连接池保证了线程读取数据的安全。通过判断请求的ip及请求次数限制非法请求，对数据使用了AES对称加密认证，最大程度上限制了黑客的攻击。
+1.前后端分离通过Restful API进行数据交互时，用传统的方式进行验证用户信息，如果页面出现了XSS漏洞，会导致token泄露，可以通过JWT(Json Web Token)解决，在使用的过程中出现的问题是Django REST框架版本过高不支持JWT，改了版本即可。2.数据库层面采用了数据库连接池保证了线程读取数据的安全。3.通过判断请求的ip及请求次数限制非法请求，对数据使用了AES对称加密认证，最大程度上限制了黑客的攻击。
 
 ## 学校实验室外包 （ 2016年3月 ~ 2017年6月 ）
 
-### 快乐校园信息系统 
+### 快乐校园信息系统 (在线信息交流平台)
 
 ##### 项目简介
 
@@ -64,17 +57,16 @@
 
 ##### 个人负责
 
-- 使用UI框架进行页面的布局设计。
-- 基于restframework的认证组件和token实现用户的登录认证
-- 基于MySQL实现数据存储，从数据库读取数据前台展示
+- 基于Django的ORM操作MySQL实现数据存取
+- 基于Ajax实现前后台数据交互
 - 基于Redis实现Django缓存
 - 使用用户的IP和ID对匿名用户和注册用户进行API访问的频率限制
+- 基于restframework的认证组件和token实现用户的登录认证
 - 基于富文本编辑器kindeditor，实现了老师、家长、学生之间的更好交流
-- 使用django-celery实现回复信息时异步发送邮件通知
 
 ##### 项目总结：
 
-个人负责了项目的主要开发。核心：一、阻止了别人恶意请求，通过Django的中间件拦截太麻烦（很多不需要拦截），通过DRF解决。二、使用不存数据库的token验证用户的状态，减少了服务器端存session的麻烦。
+1.阻止了别人恶意请求，通过Django的中间件拦截太麻烦（很多不需要拦截），通过DRF可以轻松解决。2.使用不存数据库的token验证用户的状态，减少了服务器端存session的麻烦。
 
 # 个人评价
 
